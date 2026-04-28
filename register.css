@@ -1,0 +1,500 @@
+/* register.css - Registration page styles */
+/* Sections: root variables, reset, header, form layout, inputs, footer */
+:root{--bg:#0f172a;
+   --panel:#14263c;
+   --accent:#ff8a3d;
+   --text:#eff7ff;
+   --muted:#9db1cd;
+}
+html{scroll-behavior:smooth}
+*{
+   box-sizing:border-box
+}
+body{
+   margin:0;
+   overflow-x:hidden;
+   perspective:1000px;
+}
+
+/* ===============================
+   REGISTER PAGE LAYOUT
+================================= */
+
+.register-page {
+  padding-top: 120px;
+  min-height: 100vh;
+  background: linear-gradient(135deg,#f8fafc,#eef2f7);
+}
+
+.register-hero {
+  max-width: 1200px;
+  margin: auto;
+  padding: 3rem 2rem;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* LEFT CONTENT */
+
+.eyebrow {
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: #2563eb;
+  margin-bottom: 1rem;
+}
+
+.register-content h1 {
+  font-size: 42px;
+  line-height: 1.2;
+  margin-bottom: 1.2rem;
+}
+
+.lead {
+  color: #475569;
+  font-size: 17px;
+  margin-bottom: 2rem;
+}
+
+.benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.benefits li {
+  margin-bottom: 12px;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+/* FORM CARD */
+
+.form-card {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+}
+
+.form-card h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2rem;
+}
+
+.field-group label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.field-group input,
+.field-group select {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #dbe2ea;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.field-group input:focus,
+.field-group select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+}
+
+.checkbox-group {
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.captcha-group input {
+  max-width: 150px;
+}
+
+/* BUTTON */
+
+.cta {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.cta:hover {
+  background: #1e40af;
+  transform: translateY(-2px);
+}
+
+.form-message {
+  margin-top: 1rem;
+  font-size: 14px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 900px) {
+  .register-hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .register-content h1 {
+    font-size: 32px;
+  }
+}
+
+/* =================================================
+   TOP BAR
+================================================= */
+
+.top-bar{
+
+background:#0f172a;
+
+color:#cbd5f5;
+
+display:flex;
+
+justify-content:space-between;
+
+padding:8px 40px;
+
+font-size:13px;
+}
+
+.top-left,
+.top-right{
+
+display:flex;
+
+gap:25px;
+}
+
+
+/* =================================================
+   MAIN HEADER
+================================================= */
+
+.site-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:18px 40px;
+
+background:white;
+
+border-bottom:1px solid #e5e7eb;
+
+position:sticky;
+
+top:0;
+
+z-index:999;
+}
+
+
+/* LOGO */
+
+.brand a{
+
+font-size:22px;
+
+font-weight:700;
+
+color:#1e3a8a;
+
+text-decoration:none;
+}
+
+
+/* NAV */
+
+.site-nav{
+
+display:flex;
+
+align-items:center;
+
+gap:28px;
+}
+
+.site-nav a{
+
+color:#0f6df1;
+
+font-weight:500;
+
+text-decoration:none;
+
+transition:0.3s;
+}
+
+.site-nav a:hover{
+
+color:#1e3a8a;
+}
+
+
+/* CTA BUTTON */
+
+.track-btn{
+
+background:#1e40af;
+
+color:white !important;
+
+padding:10px 20px;
+
+border-radius:999px;
+
+font-weight:600;
+
+transition:0.3s;
+}
+
+.track-btn:hover{
+
+background:#f97316;
+}
+
+/* =================================================
+   FOOTER
+================================================= */
+
+.site-footer{
+
+background:linear-gradient(
+180deg,
+#1e3a8a,
+#1e40af,
+#1e3a8a
+);
+
+color:white;
+
+padding:60px 0;
+
+margin-top:60px;
+}
+
+/* GRID */
+
+.footer-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(4,1fr);
+
+gap:40px;
+max-width:1200px;
+margin:0 auto;
+padding:0 2rem;
+}
+
+/* LOGO */
+
+.footer-logo{
+
+font-size:24px;
+
+font-weight:700;
+
+margin-bottom:15px;
+
+color:white;
+}
+
+/* TEXT */
+
+.footer-brand p{
+
+color:#cbd5f5;
+
+line-height:1.8;
+
+margin-bottom:20px;
+}
+
+/* CONTACT ITEMS */
+
+.footer-contact-item{
+
+margin-bottom:10px;
+
+color:#cbd5f5;
+}
+
+/* LINKS */
+
+.footer-links{
+
+display:flex;
+
+flex-direction:column;
+
+gap:12px;
+}
+
+/* HEADINGS */
+
+.footer-links h3{
+
+font-size:16px;
+
+margin-bottom:10px;
+
+position:relative;
+
+padding-bottom:6px;
+}
+
+/* ORANGE LINE */
+
+.footer-links h3::after{
+
+content:"";
+
+position:absolute;
+
+bottom:0;
+left:0;
+
+width:40px;
+
+height:3px;
+
+background:#f97316;
+}
+
+/* LINKS STYLE */
+
+.footer-links a{
+
+color:#cbd5f5;
+
+text-decoration:none;
+
+transition:0.3s;
+}
+
+.footer-links a:hover{
+
+color:white;
+
+padding-left:5px;
+}
+
+/* BOTTOM */
+
+.footer-bottom{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-top:40px;
+
+padding-top:20px;
+
+border-top:1px solid rgba(255,255,255,0.2);
+}
+
+/* SOCIAL */
+
+.social-icons{
+
+display:flex;
+
+gap:12px;
+}
+
+.social-icons a{
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+width:40px;
+
+height:40px;
+
+border-radius:50%;
+
+background:rgba(255,255,255,0.1);
+
+color:white;
+
+text-decoration:none;
+
+font-weight:bold;
+
+transition:0.3s;
+}
+
+.social-icons a:hover{
+
+background:#f97316;
+
+transform:translateY(-3px);
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.footer-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:600px){
+
+.footer-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.footer-bottom{
+
+flex-direction:column;
+
+gap:15px;
+
+text-align:center;
+
+}
+
+}

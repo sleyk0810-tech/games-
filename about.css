@@ -1,0 +1,725 @@
+/* about.css - About page styles */
+/* Sections: root variables, reset, header, hero, values, funding, footer */
+:root{--bg:#07131f;
+  --surface:#0f2035;
+  --accent:#4eb1ff;
+  --text:#eff7ff;
+  --muted:#a8bcd6;}
+html{scroll-behavior:smooth}
+
+body{
+margin:0;
+font-family:'Inter',sans-serif;
+color:#04101d;
+line-height:1.6;
+overflow-x:hidden;
+perspective:1000px;
+will-change:scroll-position;
+background-image:
+linear-gradient(
+rgba(227, 219, 219, 0.793),rgba(235, 229, 229, 0.55)
+),
+url("images/background.jpg");
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+}
+
+a{text-decoration:none;color:inherit}
+
+/* =================================================
+   TOP BAR
+================================================= */
+.top-bar{
+background:#0f172a;
+color:#cbd5f5;
+display:flex;
+justify-content:space-between;
+padding:8px 40px;
+font-size:13px;
+}
+
+.top-left,
+.top-right{
+display:flex;
+gap:25px;
+}
+
+/* =================================================
+   MAIN HEADER
+================================================= */
+.site-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 40px;
+background:white;
+border-bottom:1px solid #e5e7eb;
+position:sticky;
+top:0;
+z-index:999;
+}
+
+/* LOGO */
+.brand a{
+font-size:35px;
+font-weight:900;
+color:#1e3a8a;
+text-decoration:none;
+}
+
+/* NAV */
+.site-nav{
+display:flex;
+align-items:center;
+gap:28px;
+}
+.site-nav a{
+color:#0f6df1;
+font-weight:500;
+text-decoration:none;
+transition:0.3s;
+}
+.site-nav a:hover{
+color:#1e3a8a;
+}
+
+/* CTA BUTTON */
+.track-btn{
+background:#1e40af;
+color:white !important;
+padding:10px 20px;
+border-radius:999px;
+font-weight:600;
+transition:0.3s;
+}
+.track-btn:hover{
+background:#f97316;
+}
+
+/* =================================================
+   HERO SECTION — WITH RIGHT CARD
+================================================= */
+.hero-section{
+  padding:100px 40px 80px;
+  max-width:1300px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:60px;
+  align-items:center;
+}
+
+/* LEFT SIDE */
+.hero-copy{
+  max-width:720px;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+/* BADGE */
+.eyebrow-badge{
+  display:inline-block;
+  background:#fde68a;
+  color:#78350f;
+  font-size:14px;
+  font-weight:600;
+  padding:8px 16px;
+  border-radius:999px;
+  width:fit-content;
+}
+
+/* HEADLINE */
+.hero-copy h1{
+  margin:0;
+  font-size:clamp(42px, 6vw, 72px);
+  font-weight:900;
+  line-height:1.05;
+  letter-spacing:-1px;
+  color:#0f172a;
+}
+
+/* DESCRIPTION */
+.hero-description{
+  font-size:18px;
+  line-height:1.7;
+  color:#475569;
+  max-width:620px;
+}
+
+/* =================================================
+   RIGHT CARD
+================================================= */
+.hero-card{
+  background:white;
+  padding:30px;
+  border-radius:28px;
+  box-shadow:0 30px 80px rgba(15,23,42,.12);
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+/* CARD TITLE */
+.hero-card h3{
+  margin:0;
+  font-size:22px;
+  font-weight:700;
+  color:#0f172a;
+}
+
+/* INTRO TEXT */
+.card-intro{
+  font-size:15px;
+  color:#475569;
+  line-height:1.6;
+}
+
+/* FEATURES */
+.hero-feature{
+  display:flex;
+  gap:14px;
+  padding:14px;
+  border-radius:18px;
+  background:#f8fafc;
+  align-items:flex-start;
+}
+
+/* ICON */
+.feature-icon{
+  width:42px;
+  height:42px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:#e0e7ff;
+  font-size:18px;
+}
+
+/* TEXT */
+.hero-feature strong{
+  font-size:15px;
+  color:#0f172a;
+}
+
+.hero-feature p{
+  margin:4px 0 0;
+  font-size:14px;
+  color:#64748b;
+}
+
+/* =================================================
+   RESPONSIVE
+================================================= */
+@media(max-width:900px){
+  .hero-section{
+    grid-template-columns:1fr;
+  }
+}
+
+/* ============================================
+   ABOUT STATS (TOP PILLS)
+============================================ */
+.about-stats{
+  padding:60px 40px 20px;
+}
+
+.stats-row{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:18px;
+}
+
+.stat-pill{
+  background:#fff;
+  padding:18px 36px;
+  border-radius:999px;
+  text-align:center;
+  min-width:170px;
+  border:1px solid #eef2f7;
+  box-shadow:0 12px 40px rgba(15,23,42,.06);
+  transition:.3s ease;
+}
+
+.stat-pill:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 60px rgba(15,23,42,.12);
+}
+
+.stat-pill h3{
+  margin:0;
+  font-size:26px;
+  font-weight:800;
+  color:#f59e0b;
+}
+
+.stat-pill p{
+  margin-top:4px;
+  font-size:14px;
+  color:#64748b;
+}
+
+/* =================================================
+   VALUES SECTION — SUPER MODERN
+================================================= */
+.values-section{
+  padding:100px 40px;
+  max-width:1300px;
+  margin:0 auto;
+}
+
+/* HEADER AREA */
+.values-header{
+  text-align:center;
+  max-width:760px;
+  margin:20px auto 40px;
+}
+
+/* SMALL BADGE */
+.section-badge{
+  display:inline-block;
+  background:#e0e7ff;
+  color:#1e3a8a;
+  padding:8px 16px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:600;
+  margin-bottom:14px;
+}
+
+/* HUGE TITLE */
+.section-title{
+  font-size:clamp(38px, 5vw, 62px);
+  font-weight:900;
+  letter-spacing:-1px;
+  margin:0;
+  color:#0f172a;
+}
+
+.values-section{
+  padding:70px 40px;
+  max-width:1200px;
+  margin:0 auto;
+}
+
+/* SUBTITLE */
+.section-subtitle{
+  margin-top:18px;
+  font-size:18px;
+  color:#64748b;
+  line-height:1.7;
+}
+
+/* GRID */
+.values-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+
+/* CARD */
+.value-card{
+  padding:40px 30px;
+  border-radius:30px;
+  background:white;
+  border:1px solid #e5e7eb;
+  box-shadow:0 30px 80px rgba(15,23,42,.08);
+  transition:all .35s ease;
+  text-align:left;
+  position:relative;
+  overflow:hidden;
+}
+
+/* HOVER EFFECT */
+.value-card:hover{
+  transform:translateY(-12px);
+  box-shadow:0 40px 100px rgba(15,23,42,.12);
+}
+
+/* ICON */
+.value-icon{
+  width:60px;
+  height:60px;
+  border-radius:16px;
+  background:#eef2ff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  margin-bottom:18px;
+}
+
+/* CARD TITLE */
+.value-card h3{
+  margin:0 0 12px;
+  font-size:22px;
+  font-weight:700;
+  color:#0f172a;
+}
+
+/* TEXT */
+.value-card p{
+  font-size:16px;
+  color:#64748b;
+  line-height:1.7;
+}
+
+.about-stats{
+  margin-top:20px;
+}
+
+.values-section{
+  margin-top:10px;
+}
+
+/* =================================================
+   RESPONSIVE
+================================================= */
+@media(max-width:900px){
+  .values-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+/* ============================================
+   CORE IDENTITY — THREE STEP STYLE
+============================================ */
+.identity-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:26px;
+  margin-top:40px;
+}
+
+/* CARD */
+.identity-card{
+  background:white;
+  padding:42px 30px;
+  border-radius:26px;
+  border:1px solid #edf0f5;
+  box-shadow:0 18px 60px rgba(15,23,42,.06);
+  position:relative;
+  transition:.35s ease;
+}
+
+/* hover */
+.identity-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 30px 90px rgba(15,23,42,.12);
+}
+
+/* STEP CIRCLE */
+.step-circle{
+  position:absolute;
+  top:-18px;
+  left:24px;
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  background:#ffedd5;
+  color:#c2410c;
+  font-weight:800;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:18px;
+}
+
+/* TITLE */
+.identity-card h3{
+  margin-top:18px;
+  font-size:22px;
+  font-weight:800;
+  color:#0f172a;
+}
+
+/* TEXT */
+.identity-card p{
+  margin-top:10px;
+  color:#64748b;
+  font-size:15.5px;
+  line-height:1.7;
+}
+
+/* =================================================
+   FUNDING SECTION — GHANA POST STYLE LAYOUT
+================================================= */
+
+.funding-section {
+  padding: 100px 40px;
+}
+
+/* WRAPPER */
+.funding-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 80px;
+  align-items: center;
+
+  /* KEEPING YOUR BACKGROUND */
+  padding: 70px;
+  border-radius: 32px;
+  background: linear-gradient(135deg,#f8fafc,#eef2ff);
+  box-shadow: 0 40px 100px rgba(15,23,42,.08);
+}
+
+/* LEFT SIDE */
+.section-badge {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #2563eb;
+  margin-bottom: 10px;
+}
+
+.funding-title {
+  font-size: clamp(36px,4vw,52px);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 18px;
+  color: #0f172a;
+}
+
+.title-underline {
+  width: 60px;
+  height: 4px;
+  background: #f97316;
+  border-radius: 10px;
+  margin-bottom: 24px;
+}
+
+.funding-text {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #64748b;
+  max-width: 520px;
+}
+
+/* RIGHT SIDE */
+.funding-list {
+  display: grid;
+  gap: 22px;
+}
+
+/* CARD STYLE (Like Screenshot) */
+.funding-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 22px 28px;
+  border-radius: 22px;
+
+  background: rgba(255,255,255,0.85);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+
+  border: 1px solid rgba(255,255,255,0.4);
+  box-shadow: 0 15px 50px rgba(15,23,42,.08);
+
+  transition: .3s ease;
+  cursor: pointer;
+}
+
+.funding-item:hover {
+  transform: translateX(6px);
+  box-shadow: 0 25px 70px rgba(15,23,42,.15);
+}
+
+/* LEFT PART INSIDE CARD */
+.fund-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* ICON BOX */
+.fund-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+  background: rgba(37,99,235,.12);
+}
+
+/* TEXT */
+.funding-item span {
+  font-size: 17px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* RIGHT ARROW CIRCLE */
+.fund-arrow {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+  background: rgba(15,23,42,.06);
+  transition: .3s ease;
+}
+
+.funding-item:hover .fund-arrow {
+  background: #2563eb;
+  color: white;
+}
+
+/* =================================================
+   FOOTER
+================================================= */
+.site-footer{
+background:linear-gradient(
+180deg,
+#1e3a8a,
+#1e40af,
+#1e3a8a
+);
+color:white;
+padding:60px 40px;
+margin-top:60px;
+}
+
+/* GRID */
+.footer-grid{
+display:grid;
+grid-template-columns:
+repeat(4,1fr);
+gap:40px;
+}
+
+/* LOGO */
+.footer-logo{
+font-size:24px;
+font-weight:700;
+margin-bottom:15px;
+color:white;
+}
+
+/* TEXT */
+.footer-brand p{
+color:#cbd5f5;
+line-height:1.8;
+margin-bottom:20px;
+}
+
+/* CONTACT ITEMS */
+.footer-contact-item{
+margin-bottom:10px;
+color:#cbd5f5;
+}
+
+/* LINKS */
+.footer-links{
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+/* HEADINGS */
+.footer-links h3{
+font-size:16px;
+margin-bottom:10px;
+position:relative;
+padding-bottom:6px;
+}
+
+/* ORANGE LINE */
+.footer-links h3::after{
+content:"";
+position:absolute;
+bottom:0;
+left:0;
+width:40px;
+height:3px;
+background:#f97316;
+}
+
+/* LINKS STYLE */
+.footer-links a{
+color:#cbd5f5;
+text-decoration:none;
+transition:0.3s;
+}
+
+.footer-links a:hover{
+color:white;
+padding-left:5px;
+}
+
+/* BOTTOM */
+.footer-bottom{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-top:40px;
+padding-top:20px;
+border-top:1px solid rgba(255,255,255,0.2);
+}
+
+/* SOCIAL */
+.social-icons{
+display:flex;
+gap:12px;
+}
+
+.social-icons a{
+display:flex;
+align-items:center;
+justify-content:center;
+width:40px;
+height:40px;
+border-radius:50%;
+background:rgba(255,255,255,0.1);
+color:white;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+.social-icons a:hover{
+background:#f97316;
+transform:translateY(-3px);
+}
+
+/* MOBILE */
+@media(max-width:900px){
+.footer-grid{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+@media(max-width:600px){
+
+.footer-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.footer-bottom{
+
+flex-direction:column;
+
+gap:15px;
+
+text-align:center;
+
+}
+
+}
